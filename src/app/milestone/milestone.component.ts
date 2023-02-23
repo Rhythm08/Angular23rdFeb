@@ -16,7 +16,7 @@ export class MilestoneComponent implements OnInit {
       this.milestoneArray=data;
     })
     this.milestone.getStatus().subscribe((data)=>{
-      // console.log(data);
+      console.log(data);
       this.milestoneStatus=data;
     })
 }
@@ -26,15 +26,16 @@ getValue(milesId:any,statusId:any){
 }
 updateVal(updateValue:any,statusid:any){
   
-  // console.log(this.milestoneArray);
-  // console.log(updateValue+ "is value");
+  console.log(this.milestoneArray);
+  console.log(statusid.value+ "is status")
+  console.log(updateValue+ "is value");
   let milesdata:any;
   for(let i of this.milestoneArray){
     if(i.id==updateValue){
-      // console.log(i)
-      i.status=statusid;
+      console.log(i)
+      i.status=statusid.value;
       milesdata = {...i};
-      // console.log(milesdata)
+      console.log(milesdata)
       break;  
       
     }
@@ -47,13 +48,13 @@ updateVal(updateValue:any,statusid:any){
           this.milestoneArray=data;
         }
       );
-      // console.log(data);
+      console.log(data);
     }
   )
   
 }
 checkDisable(mileid:any,statusid:any){
-  console.log(mileid, statusid)
+  // console.log(mileid, statusid)
     if(mileid==4){
       return [1,3].includes(statusid)
     }

@@ -10,7 +10,7 @@
       "id": 2,
       "name": "Project 2",
       "description": "Project 2 description",
-      "status": 3
+      "status": "2"
     },
     {
       "id": 3,
@@ -52,7 +52,7 @@
       "id": 9,
       "name": "Project 9",
       "description": "Project 9 description",
-      "status": "4"
+      "status": "1"
     }
   ],
   "Milestone": [
@@ -60,7 +60,7 @@
       "id": 1,
       "name": "Milestone 1",
       "description": "Milestone 1 description",
-      "status": 4
+      "status": "4"
     },
     {
       "id": 2,
@@ -72,19 +72,44 @@
       "id": 3,
       "name": "Milestone 3",
       "description": "Milestone 3 description",
-      "status": 1
+      "status": {
+        "0": {
+          "__ngContext__": 20
+        },
+        "1": {
+          "__ngContext__": 21
+        },
+        "2": {
+          "__ngContext__": 22
+        },
+        "3": {
+          "__ngContext__": 23
+        },
+        "4": {
+          "__ngContext__": 24
+        },
+        "__zone_symbol__changefalse": [
+          {
+            "type": "eventTask",
+            "state": "running",
+            "source": "HTMLSelectElement.addEventListener:change",
+            "zone": "angular",
+            "runCount": 2
+          }
+        ]
+      }
     },
     {
       "id": 4,
       "name": "Milestone 4",
       "description": "Milestone 4 description",
-      "status": 1
+      "status": "2"
     },
     {
       "id": 5,
       "name": "Milestone 5",
       "description": "Milestone 5 description",
-      "status": 1
+      "status": "1"
     }
   ],
   "Task": [
@@ -92,13 +117,13 @@
       "id": 1,
       "name": "Task 1",
       "description": "Task 1 description",
-      "status": "4"
+      "status": "volvo"
     },
     {
       "id": 2,
       "name": "Task 2",
       "description": "Task 2 description",
-      "status": "4"
+      "status": "2"
     },
     {
       "id": 3,
@@ -122,7 +147,7 @@
       "id": 6,
       "name": "Task 6",
       "description": "Task 6 description",
-      "status": "4"
+      "status": "4OnHold"
     },
     {
       "id": 7,
