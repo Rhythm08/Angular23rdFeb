@@ -1,0 +1,26 @@
+ <div class="container" style="width:800px">
+      <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor ="let project of projectlist"> 
+                <th scope="row">{{project.id}}</th>
+                <td>{{project.name}}</td>
+                <td>{{project.description}}</td>
+                <td>
+                  <select name="cars" id="cars">
+                    <option value="volvo" *ngFor="let status of projectlistStatus">{{status|json|slice:24:-3}}</option>
+                    
+                  </select>
+                </td>
+            </tr>
+            
+        </tbody>
+      </table>
+      </div>

@@ -1,0 +1,23 @@
+{
+    "project_status":[
+        {"id":1,"name":"NotStarted"},
+        {"id":2,"name":"InProgress"},       
+         {"id":4,"name":"OnHold"},
+        {"id":3,"name":"Completed"},
+        {"id":9,"name":"Cancelled"}
+    ],
+    "MileStone_status":[
+        {"id":2,"name":"InProgress"},
+        {"id":1,"name":"NotStarted"},
+        {"id":4,"name":"OnHold"},
+        {"id":5,"name":"Cancelled"},
+        {"id":3,"name":"Completed"}
+    ],
+    "Task_Status" :[
+        {"id":1,"name":"NotStarted"},
+        {"id":2,"name":"InProgress"},
+        {"id":3,"name":"Completed"},
+        {"id":4,"name":"OnHold"},
+        {"id":5,"name":"Cancelled"} 
+    ]
+}

@@ -1,0 +1,43 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Angular Task</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav flex-column">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="project">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="milestonenav()">MileStone</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="tasknav()">Tasks</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <style>
+    /* CSS code */
+    .navbar-nav.flex-column {
+      margin-top: 70px; /* adjust this value to change the distance from the top */
+    }
+  
+    @media (min-width: 992px) {
+      .navbar-nav.flex-column {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 200px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        overflow-y: auto;
+        background-color: #f8f9fa;
+        border-right: 1px solid #dee2e6;
+      }
+    }
+  </style>
+  
