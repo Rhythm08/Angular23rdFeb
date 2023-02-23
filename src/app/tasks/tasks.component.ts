@@ -9,7 +9,7 @@ export class TasksComponent implements OnInit {
 
   constructor(private taskservice:TaskService) { }
   taskArray:any=[]
-  taskStausArray:any=[]
+  taskStatusArray:any=[]
   ngOnInit(): void {
     this.taskservice.getTask().subscribe((data)=>{
       console.log(data);
@@ -17,10 +17,43 @@ export class TasksComponent implements OnInit {
     })
     this.taskservice.gettaskStatus().subscribe((data)=>{
       console.log(data);
-      this.taskStausArray=data;
+      this.taskStatusArray=data;
 
     })
     
+  }
+  getValue(projectId:any,statusId:any){
+    return projectId==statusId;
+  }
+  updateVal(updateValue:any,statusid:any){
+    let projectdata:any;
+    for(let i of this.taskArray){
+      if(i.id==updateValue){
+        i.status=statusid.value;
+        projectdata={...i};
+        break;
+      }
+    }
+    this.taskservice.updateStatus(updateValue,projectdata).subscribe(
+      (data)=>{
+        this.taskservice.getTask().subscribe(
+          (data)=>{
+            this.taskArray=data;
+          }
+        );
+        console.log(data);
+      }
+    )
+  }
+  checkDisable(mileid:any,statusid:any){
+    // console.log(mileid, statusid)
+      if(mileid==4){
+        return [1,3].includes(statusid)
+      }
+      else if(mileid==2){
+        return [1].includes(statusid)
+      }
+      else return false;
   }
   
 }

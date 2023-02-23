@@ -27,7 +27,7 @@ export class ProjectComponent implements OnInit {
     let projectdata:any;
     for(let i of this.projectlist){
       if(i.id==updateValue){
-        i.status=statusid;
+        i.status=statusid.value;
         projectdata={...i};
         break;
       }
@@ -43,5 +43,16 @@ export class ProjectComponent implements OnInit {
       }
     )
   }
+  checkDisable(mileid:any,statusid:any){
+    // console.log(mileid, statusid)
+      if(mileid==4){
+        return [1,3].includes(statusid)
+      }
+      else if(mileid==2){
+        return [1].includes(statusid)
+      }
+      else return false;
+  }
+  
 
 }
