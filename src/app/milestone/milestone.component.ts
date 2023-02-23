@@ -21,9 +21,34 @@ export class MilestoneComponent implements OnInit {
     })
 }
 getValue(milesId:any,statusId:any){
-  
+
    return milesId==statusId
 }
-
+updateVal(updateValue:any,statusid:any){
+  // console.log(this.milestoneArray);
+  // console.log(updateValue+ "is value");
+  let milesdata:any;
+  for(let i of this.milestoneArray){
+    if(i.id==updateValue){
+      // console.log(i)
+      i.status=statusid;
+      milesdata = {...i};
+      console.log(milesdata)
+      break;
+      
+    }
+  }
+  this.milestone.updateStatus(updateValue,milesdata).subscribe(
+    (data)=>{
+      this.milestone.getMilestone().subscribe(
+        (data)=>{
+          this.milestoneArray=data;
+        }
+      );
+      console.log(data);
+    }
+  )
+  
+}
 
 }

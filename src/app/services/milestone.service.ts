@@ -15,8 +15,9 @@ export class MilestoneService {
   getStatus(){
     return this.httpclient.get(this.url1);
   }
-  updateStatus(updateStatus:any){
-      return this.httpclient.put(this.url,updateStatus)
+  updateStatus(updateStatus:any,updatedata:any){
+    console.log("The val "+ updateStatus,updatedata);
+      return this.httpclient.put(this.url+'/'+updateStatus,updatedata);
   }
   
 }
