@@ -15,7 +15,7 @@
             <td>{{miles.description}}</td>
             <td >
               <select name="cars" id="cars">
-                <option value="status" *ngFor="let status of milestoneStatus" (click)="updateVal(miles.id,status.id)" [selected]="getValue(miles.status,status.id)"  [value]="status.id" >{{status.id+status.name}}</option>
+                <option value="status" *ngFor="let status of milestoneStatus" (click)="updateVal(miles.id,status.id)" [selected]="getValue(miles.status,status.id)"  [value]="status.id"  [disabled]="checkDisable(miles.status,status.id)" >{{status.id+status.name}}</option>
     
                 
               </select>

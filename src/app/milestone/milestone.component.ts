@@ -25,6 +25,7 @@ getValue(milesId:any,statusId:any){
    return milesId==statusId
 }
 updateVal(updateValue:any,statusid:any){
+  
   // console.log(this.milestoneArray);
   // console.log(updateValue+ "is value");
   let milesdata:any;
@@ -33,10 +34,11 @@ updateVal(updateValue:any,statusid:any){
       // console.log(i)
       i.status=statusid;
       milesdata = {...i};
-      console.log(milesdata)
-      break;
+      // console.log(milesdata)
+      break;  
       
     }
+
   }
   this.milestone.updateStatus(updateValue,milesdata).subscribe(
     (data)=>{
@@ -45,10 +47,23 @@ updateVal(updateValue:any,statusid:any){
           this.milestoneArray=data;
         }
       );
-      console.log(data);
+      // console.log(data);
     }
   )
   
 }
+checkDisable(mileid:any,statusid:any){
+  console.log(mileid, statusid)
+    if(mileid==4){
+      return [1,3].includes(statusid)
+    }
+    else if(mileid==2){
+      return [1].includes(statusid)
+    }
+    else return false;
+}
+
+
+
 
 }

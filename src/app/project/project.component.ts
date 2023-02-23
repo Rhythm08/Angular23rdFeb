@@ -20,5 +20,28 @@ export class ProjectComponent implements OnInit {
 
     })
   }
+  getValue(projectId:any,statusId:any){
+    return projectId==statusId;
+  }
+  updateVal(updateValue:any,statusid:any){
+    let projectdata:any;
+    for(let i of this.projectlist){
+      if(i.id==updateValue){
+        i.status=statusid;
+        projectdata={...i};
+        break;
+      }
+    }
+    this.projectService.updateStatus(updateValue,projectdata).subscribe(
+      (data)=>{
+        this.projectService.getProject().subscribe(
+          (data)=>{
+            this.projectlist=data;
+          }
+        );
+        console.log(data);
+      }
+    )
+  }
 
 }

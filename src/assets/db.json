@@ -10,7 +10,7 @@
       "id": 2,
       "name": "Project 2",
       "description": "Project 2 description",
-      "status": "4"
+      "status": 3
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "id": 6,
       "name": "Project 6",
       "description": "Project 6 description",
-      "status": "4"
+      "status": 3
     },
     {
       "id": 7,
@@ -60,7 +60,7 @@
       "id": 1,
       "name": "Milestone 1",
       "description": "Milestone 1 description",
-      "status": 5
+      "status": 4
     },
     {
       "id": 2,
@@ -72,19 +72,19 @@
       "id": 3,
       "name": "Milestone 3",
       "description": "Milestone 3 description",
-      "status": "4"
+      "status": 1
     },
     {
       "id": 4,
       "name": "Milestone 4",
       "description": "Milestone 4 description",
-      "status": "4"
+      "status": 1
     },
     {
       "id": 5,
       "name": "Milestone 5",
       "description": "Milestone 5 description",
-      "status": "4"
+      "status": 1
     }
   ],
   "Task": [

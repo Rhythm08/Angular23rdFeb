@@ -15,7 +15,7 @@
                 <td>{{project.description}}</td>
                 <td>
                   <select name="cars" id="cars">
-                    <option value="volvo" *ngFor="let status of projectlistStatus">{{status|json|slice:24:-3}}</option>
+                    <option value="status"(click)="updateVal(project.id,status.id)" [selected]="getValue(project.status,status.id)" [value]="status.id"  *ngFor="let status of projectlistStatus">{{status.id+status.name}}</option>
                     
                   </select>
                 </td>
