@@ -4,13 +4,13 @@
       "id": 1,
       "name": "Project 1",
       "description": "Project 1 description",
-      "status": "4"
+      "status": "2"
     },
     {
       "id": 2,
       "name": "Project 2",
       "description": "Project 2 description",
-      "status": "2"
+      "status": "4"
     },
     {
       "id": 3,
@@ -28,13 +28,13 @@
       "id": 5,
       "name": "Project 5",
       "description": "Project 5 description",
-      "status": "4"
+      "status": "2"
     },
     {
       "id": 6,
       "name": "Project 6",
       "description": "Project 6 description",
-      "status": 3
+      "status": "4"
     },
     {
       "id": 7,
@@ -46,7 +46,7 @@
       "id": 8,
       "name": "Project 8",
       "description": "Project 8 description",
-      "status": "4"
+      "status": "9"
     },
     {
       "id": 9,
@@ -66,7 +66,7 @@
       "id": 2,
       "name": "Milestone 2",
       "description": "Milestone 2 description",
-      "status": 2
+      "status": "4"
     },
     {
       "id": 3,
@@ -103,7 +103,7 @@
       "id": 4,
       "name": "Milestone 4",
       "description": "Milestone 4 description",
-      "status": "2"
+      "status": "5"
     },
     {
       "id": 5,
@@ -117,7 +117,7 @@
       "id": 1,
       "name": "Task 1",
       "description": "Task 1 description",
-      "status": "volvo"
+      "status": "3"
     },
     {
       "id": 2,
@@ -129,7 +129,7 @@
       "id": 3,
       "name": "Task 3",
       "description": "Task 3 description",
-      "status": "4"
+      "status": "2"
     },
     {
       "id": 4,
@@ -171,7 +171,7 @@
       "id": 10,
       "name": "Task 10",
       "description": "Task 10 description",
-      "status": "4"
+      "status": "5"
     }
   ]
 }

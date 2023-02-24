@@ -9,7 +9,6 @@ import { TasksComponent } from './tasks/tasks.component';
 import { MilestoneComponent } from './milestone/milestone.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { StatusComponent } from './status/status.component';
 
 
 const routes :Routes = [
@@ -26,7 +25,6 @@ const routes :Routes = [
     TasksComponent,
     MilestoneComponent,
     NavbarComponent,
-    StatusComponent
   ],
   imports: [
     BrowserModule,
