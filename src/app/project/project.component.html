@@ -16,8 +16,8 @@
         <td>
           <select (change)="updateVal(project.id,$event.target)">
             <option value="status" 
-              [selected]="getValue(project.status,status.id)"  [value]="status.id" [disabled]="checkDisable(project.status,status.id)"
-              *ngFor="let status of projectlistStatus"  [style.display]="project.status==status.id?'none':'unset'">{{status.id+status.name}}</option>
+              [selected]="getValue(project.status,status.id)"  [value]="status.id" 
+              *ngFor="let status of projectlistStatus"  [style.display]="checkDisable(project.status,status.id)?'none':'unset'">{{status.name}}</option>
 
           </select>
         </td>
