@@ -9,6 +9,7 @@ export class ProjectComponent implements OnInit {
   constructor(private projectService: ProjectService) { }
   projectlist:any= []
   projectlistStatus:any=[]
+  tempArray:any =[]
   ngOnInit(): void {
     this.projectService.getProject().subscribe((data)=>{
       console.log(data);
@@ -17,10 +18,19 @@ export class ProjectComponent implements OnInit {
     this.projectService.getProjectStatus().subscribe((data)=>{
       console.log(data);
       this.projectlistStatus=data;
+      this.tempArray=data;
+    console.log(this.projectlistStatus)
 
     })
   }
   getValue(projectId:any,statusId:any){
+    // console.log(statusId, "resd")
+
+    return projectId==statusId;
+  }
+  getIf(projectId:any,statusId:any){
+    // console.log(statusId, "resd")
+
     return projectId==statusId;
   }
   updateVal(updateValue:any,statusid:any){
@@ -32,6 +42,8 @@ export class ProjectComponent implements OnInit {
         break;
       }
     }
+    // console.log(this.projectlist, "thissi ir", statusid.value, this.tempArray)
+    
     this.projectService.updateStatus(updateValue,projectdata).subscribe(
       (data)=>{
         this.projectService.getProject().subscribe(
@@ -46,7 +58,10 @@ export class ProjectComponent implements OnInit {
   checkDisable(mileid:any,statusid:any){
     // console.log(mileid, statusid)
       if(mileid==4){
-        return [1,3].includes(statusid)
+        // if(statusid.value==9){
+          // this.projectlistStatus = this.projectlistStatus.slice(0,3)
+        // } 
+        return [1,3].includes(statusid) 
       }
       else if(mileid==2){
         return [1].includes(statusid)
@@ -54,5 +69,15 @@ export class ProjectComponent implements OnInit {
       else return false;
   }
   //hello
+  isVisible(projectstatus:any,selectionStatus:any){
+    console.log(typeof projectstatus, typeof selectionStatus)
+    if(projectstatus==1){  
+    if(([3,4].includes(selectionStatus))){return 'hidden'}
+    else{
+      return 'visible'
+    }
+  }
+  return 'visible';
+  }
 
 }
