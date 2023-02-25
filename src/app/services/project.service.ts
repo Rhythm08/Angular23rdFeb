@@ -15,7 +15,12 @@ export class ProjectService {
       return this.httpclient.get(this.url1);
     }
     updateStatus(updateStatus:any,updatedata:any){
-      console.log("The val "+ updateStatus,updatedata);
+      console.log("The val "+ updateStatus,"---->",updatedata);
         return this.httpclient.put(this.url+'/'+updateStatus,updatedata);
+    }
+    updateRemark(updateRemark:any,updatedata:any){
+      console.log("The val "+ updateRemark,updatedata);
+        return this.httpclient.put(this.url+'/'+updateRemark,updatedata);
+
     }
 }

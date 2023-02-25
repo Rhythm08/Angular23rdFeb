@@ -4,55 +4,36 @@
       "id": 1,
       "name": "Project 1",
       "description": "Project 1 description",
-      "status": "4"
+      "status": "9",
+      "remarks": "This is cancelled due to unforseen reasons"
     },
     {
       "id": 2,
       "name": "Project 2",
       "description": "Project 2 description",
-      "status": "2"
+      "status": "2",
+      "remarks": "hello"
     },
     {
       "id": 3,
       "name": "Project 3",
       "description": "Project 3 description",
-      "status": "2"
+      "status": "9",
+      "remarks": "hello"
     },
     {
       "id": 4,
       "name": "Project 4",
       "description": "Project 4 description",
-      "status": "2"
+      "status": "9",
+      "remarks": "hello"
     },
     {
       "id": 5,
       "name": "Project 5",
       "description": "Project 5 description",
-      "status": "4"
-    },
-    {
-      "id": 6,
-      "name": "Project 6",
-      "description": "Project 6 description",
-      "status": "2"
-    },
-    {
-      "id": 7,
-      "name": "Project 7",
-      "description": "Project 7 description",
-      "status": "4"
-    },
-    {
-      "id": 8,
-      "name": "Project 8",
-      "description": "Project 8 description",
-      "status": "4"
-    },
-    {
-      "id": 9,
-      "name": "Project 9",
-      "description": "Project 9 description",
-      "status": "2"
+      "status": "9",
+      "remarks": "hello"
     }
   ],
   "Milestone": [
@@ -60,31 +41,36 @@
       "id": 1,
       "name": "Milestone 1",
       "description": "Milestone 1 description",
-      "status": "4"
+      "status": "4",
+      "remarks": ""
     },
     {
       "id": 2,
       "name": "Milestone 2",
       "description": "Milestone 2 description",
-      "status": "4"
+      "status": "4",
+      "remarks": ""
     },
     {
       "id": 3,
       "name": "Milestone 3",
       "description": "Milestone 3 description",
-      "status": "3"
+      "status": "3",
+      "remarks": ""
     },
     {
       "id": 4,
       "name": "Milestone 4",
       "description": "Milestone 4 description",
-      "status": "2"
+      "status": "2",
+      "remarks": ""
     },
     {
       "id": 5,
       "name": "Milestone 5",
       "description": "Milestone 5 description",
-      "status": "1"
+      "status": "1",
+      "remarks": ""
     }
   ],
   "Task": [
@@ -92,61 +78,71 @@
       "id": 1,
       "name": "Task 1",
       "description": "Task 1 description",
-      "status": "2"
+      "status": "2",
+      "remarks": ""
     },
     {
       "id": 2,
       "name": "Task 2",
       "description": "Task 2 description",
-      "status": "3"
+      "status": "3",
+      "remarks": ""
     },
     {
       "id": 3,
       "name": "Task 3",
       "description": "Task 3 description",
-      "status": "2"
+      "status": "2",
+      "remarks": ""
     },
     {
       "id": 4,
       "name": "Task 4",
       "description": "Task 4 description",
-      "status": "5"
+      "status": "5",
+      "remarks": ""
     },
     {
       "id": 5,
       "name": "Task 5",
       "description": "Task 5 description",
-      "status": "5"
+      "status": "5",
+      "remarks": ""
     },
     {
       "id": 6,
       "name": "Task 6",
       "description": "Task 6 description",
-      "status": "4"
+      "status": "4",
+      "remarks": ""
     },
     {
       "id": 7,
       "name": "Task 7",
       "description": "Task 7 description",
-      "status": "5"
+      "status": "5",
+      "remarks": ""
     },
     {
       "id": 8,
       "name": "Task 8",
       "description": "Task 8 description",
-      "status": "3"
+      "status": "3",
+      "remarks": ""
     },
     {
       "id": 9,
       "name": "Task 9",
       "description": "Task 9 description",
-      "status": "1"
+      "status": "1",
+      "remarks": ""
     },
     {
       "id": 10,
       "name": "Task 10",
       "description": "Task 10 description",
-      "status": "2"
+      "status": "2",
+      "remarks": ""
     }
   ]
 }

@@ -43,17 +43,20 @@ export class ProjectComponent implements OnInit {
       dialogConfig.disableClose=true;
       dialogConfig.autoFocus=true;
       dialogConfig.width="20%";
+      dialogConfig.data = { updateValue: updateValue };
       const dialogRef = this.dialog.open(PopUpComponent,dialogConfig);
       dialogRef.afterClosed().subscribe(result => {
-        if (result === "submit") {
+        if (result && result.submit) {
           console.log("submit is there")
-          for (let i of this.projectlist) {
+          for (let i of result.project_array) {
             if (i.id == updateValue) {
               i.status = statusid.value;
               projectdata = { ...i };
               break;
             }
           }
+          console.log(result.project_array[updateValue].remarks, " Rhythm")
+          // projectdata.remarks = result.project_array[updateValue].remarks;
           this.projectService.updateStatus(updateValue, projectdata).subscribe(
             (data) => {
               this.projectlist = this.projectlist.map((project: any) => {

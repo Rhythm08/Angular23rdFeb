@@ -6,6 +6,7 @@
         <th>Name</th>
         <th>Description</th>
         <th>Status</th>
+        <th style="visibility: hidden;">Remarks</th>
       </tr>
     </thead>
     <tbody>
@@ -18,9 +19,10 @@
             <option value="status" 
               [selected]="getValue(project.status,status.id)"  [value]="status.id" 
               *ngFor="let status of projectlistStatus"  [style.display]="checkDisable(project.status,status.id)?'none':'unset'">{{status.name}}</option>
-
+            
           </select>
         </td>
+        <td  style="visibility: show;">{{project.remarks}}</td>
       </tr>
 
     </tbody>
