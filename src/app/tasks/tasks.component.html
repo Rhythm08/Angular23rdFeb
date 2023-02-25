@@ -16,7 +16,7 @@
           <td>
             <select (change)="updateVal(task.id,$event.target)">
               <option  *ngFor=" let status of taskStatusArray"
-              [selected]="getValue(task.status,status.id)" [value]="status.id" [disabled]="checkDisable(task.status,status.id)"
+              [selected]="getValue(task.status,status.id)" [value]="status.id" [style.display]="checkDisable(task.status,status.id)?'none':'unset'"
               >{{status.id+status.name}}</option>
               
             </select>

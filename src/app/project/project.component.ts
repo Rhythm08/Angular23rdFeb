@@ -9,7 +9,6 @@ export class ProjectComponent implements OnInit {
   constructor(private projectService: ProjectService) { }
   projectlist:any= []
   projectlistStatus:any=[]
-  tempArray:any =[]
   ngOnInit(): void {
     this.projectService.getProject().subscribe((data)=>{
       console.log(data);
@@ -18,7 +17,6 @@ export class ProjectComponent implements OnInit {
     this.projectService.getProjectStatus().subscribe((data)=>{
       console.log(data);
       this.projectlistStatus=data;
-      this.tempArray=data;
     console.log(this.projectlistStatus)
 
     })

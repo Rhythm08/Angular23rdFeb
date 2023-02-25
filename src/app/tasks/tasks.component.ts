@@ -48,10 +48,18 @@ export class TasksComponent implements OnInit {
   checkDisable(mileid:any,statusid:any){
     // console.log(mileid, statusid)
       if(mileid==4){
-        return [1,3].includes(statusid)
+        
+        return [1,3].includes(statusid) 
       }
       else if(mileid==2){
-        return [1].includes(statusid)
+        return ([1].includes(statusid))
+      }
+      else if(mileid==9 || mileid==3){
+        return !([2].includes(statusid))
+      }
+      
+      else if((mileid==statusid)){
+        return true;
       }
       else return false;
   }

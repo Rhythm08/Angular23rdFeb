@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Project 1",
       "description": "Project 1 description",
-      "status": "2"
+      "status": "4"
     },
     {
       "id": 2,
@@ -72,38 +72,13 @@
       "id": 3,
       "name": "Milestone 3",
       "description": "Milestone 3 description",
-      "status": {
-        "0": {
-          "__ngContext__": 20
-        },
-        "1": {
-          "__ngContext__": 21
-        },
-        "2": {
-          "__ngContext__": 22
-        },
-        "3": {
-          "__ngContext__": 23
-        },
-        "4": {
-          "__ngContext__": 24
-        },
-        "__zone_symbol__changefalse": [
-          {
-            "type": "eventTask",
-            "state": "running",
-            "source": "HTMLSelectElement.addEventListener:change",
-            "zone": "angular",
-            "runCount": 2
-          }
-        ]
-      }
+      "status": "3"
     },
     {
       "id": 4,
       "name": "Milestone 4",
       "description": "Milestone 4 description",
-      "status": "5"
+      "status": "2"
     },
     {
       "id": 5,
@@ -117,13 +92,13 @@
       "id": 1,
       "name": "Task 1",
       "description": "Task 1 description",
-      "status": "3"
+      "status": "2"
     },
     {
       "id": 2,
       "name": "Task 2",
       "description": "Task 2 description",
-      "status": "2"
+      "status": "3"
     },
     {
       "id": 3,
@@ -147,7 +122,7 @@
       "id": 6,
       "name": "Task 6",
       "description": "Task 6 description",
-      "status": "4OnHold"
+      "status": "4"
     },
     {
       "id": 7,
@@ -171,7 +146,7 @@
       "id": 10,
       "name": "Task 10",
       "description": "Task 10 description",
-      "status": "5"
+      "status": "2"
     }
   ]
 }
