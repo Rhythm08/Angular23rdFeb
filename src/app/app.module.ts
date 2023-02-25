@@ -9,7 +9,9 @@ import { TasksComponent } from './tasks/tasks.component';
 import { MilestoneComponent } from './milestone/milestone.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import { PopUpComponent } from './pop-up/pop-up.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes :Routes = [
   // {path: '', redirectTo: '/project', pathMatch: 'full'},
@@ -25,6 +27,7 @@ const routes :Routes = [
     TasksComponent,
     MilestoneComponent,
     NavbarComponent,
+    PopUpComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,9 @@ const routes :Routes = [
     RouterModule.forRoot(routes),
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

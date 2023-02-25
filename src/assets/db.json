@@ -10,7 +10,7 @@
       "id": 2,
       "name": "Project 2",
       "description": "Project 2 description",
-      "status": "4"
+      "status": "2"
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "id": 6,
       "name": "Project 6",
       "description": "Project 6 description",
-      "status": "3"
+      "status": "2"
     },
     {
       "id": 7,
@@ -46,13 +46,13 @@
       "id": 8,
       "name": "Project 8",
       "description": "Project 8 description",
-      "status": "2"
+      "status": "4"
     },
     {
       "id": 9,
       "name": "Project 9",
       "description": "Project 9 description",
-      "status": "1"
+      "status": "2"
     }
   ],
   "Milestone": [
@@ -110,13 +110,13 @@
       "id": 4,
       "name": "Task 4",
       "description": "Task 4 description",
-      "status": "4"
+      "status": "5"
     },
     {
       "id": 5,
       "name": "Task 5",
       "description": "Task 5 description",
-      "status": "4"
+      "status": "5"
     },
     {
       "id": 6,
@@ -128,19 +128,19 @@
       "id": 7,
       "name": "Task 7",
       "description": "Task 7 description",
-      "status": "4"
+      "status": "5"
     },
     {
       "id": 8,
       "name": "Task 8",
       "description": "Task 8 description",
-      "status": "4"
+      "status": "3"
     },
     {
       "id": 9,
       "name": "Task 9",
       "description": "Task 9 description",
-      "status": "4"
+      "status": "1"
     },
     {
       "id": 10,
