@@ -4,8 +4,8 @@
       "id": 1,
       "name": "Project 1",
       "description": "Project 1 description",
-      "status": "2",
-      "remarks": "sdds"
+      "status": "4",
+      "remarks": "sdfghj"
     },
     {
       "id": 2,
@@ -19,20 +19,21 @@
       "name": "Project 3",
       "description": "Project 3 description",
       "status": "2",
-      "remarks": "dfgnh"
+      "remarks": ""
     },
     {
       "id": 4,
       "name": "Project 4",
       "description": "Project 4 description",
-      "remarks": "dvbnm,"
+      "remarks": "",
+      "status": "2"
     },
     {
       "id": 5,
       "name": "Project 5",
       "description": "Project 5 description",
-      "status": "9",
-      "remarks": "axsdfgn"
+      "status": "2",
+      "remarks": ""
     },
     {
       "id": 6,
