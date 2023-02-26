@@ -32,7 +32,7 @@ export class PopUpComponent implements OnInit,OnChanges {
     }
     console.log(this.project_array[0].remarks, " sharma")
     
-   this.dialogRef.close({'submit':true,project_array:  this.project_array});
+   this.dialogRef.close({'submit':true , project_array:  this.project_array});
     }
     OnCancel(){
       this.dialogRef.close('cancel');

@@ -1,4 +1,4 @@
-import { Component,OnInit} from '@angular/core';
+import { Component,OnChanges,OnInit} from '@angular/core';
 import { ProjectService } from '../services/project.service';
 import { MatDialog,MatDialogConfig } from '@angular/material/dialog';
 import { PopUpComponent } from '../pop-up/pop-up.component';
@@ -9,7 +9,7 @@ import { PopUpComponent } from '../pop-up/pop-up.component';
   styleUrls: ['./project.component.css']
 })
 
-export class ProjectComponent implements OnInit {
+export class ProjectComponent implements OnInit,OnChanges {
   flag:number=0;
   prev_val:any;
   constructor(private projectService: ProjectService, private dialog:MatDialog) { }
@@ -26,6 +26,13 @@ export class ProjectComponent implements OnInit {
       console.log(data);
       this.projectlistStatus=data;
     })
+  }
+  ngOnChanges(){   // To be Removed
+    this.projectlist.getProject().subscribe((data: any) => {
+                
+      this.projectlist=data;
+      console.log(this.projectlist," On changes")
+    });
   }
   
   getValue(projectId:any,statusId:any){
@@ -50,27 +57,32 @@ export class ProjectComponent implements OnInit {
           console.log("submit is there")
           for (let i of result.project_array) {
             if (i.id == updateValue) {
+              console.log(i.id, "this is ID")
               i.status = statusid.value;
               projectdata = { ...i };
+              console.log(projectdata, "this is project data")
               break;
             }
           }
-          console.log(result.project_array[updateValue].remarks, " Rhythm")
+          // console.log(result.project_array[updateValue].remarks, " Rhythm")
           // projectdata.remarks = result.project_array[updateValue].remarks;
           this.projectService.updateStatus(updateValue, projectdata).subscribe(
             (data) => {
-              this.projectlist = this.projectlist.map((project: any) => {
-                if (project.id === updateValue) {
-                  project.status = statusid.value;
-                }
-                return project;
+              this.projectService.getProject().subscribe((data: any) => {
+                this.projectlist = data;
+                console.log(this.projectlist, " On changes")
               });
-            
-              console.log(data);
             }
           );
         } else {
-          statusid.value = prev_val;
+          // statusid.value = prev_val;
+
+          
+          this.projectService.getProject().subscribe((data)=>{
+            console.log(data);
+            this.projectlist=data;
+          })
+          
           console.log(prev_val+ "current value")
           this.flag=1;
         }
@@ -103,6 +115,7 @@ export class ProjectComponent implements OnInit {
   }
 
   checkDisable(mileid:any,statusid:any){
+    
     if(mileid==4){
       return [1,3].includes(statusid) 
     }
