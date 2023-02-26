@@ -76,14 +76,14 @@ export class ProjectComponent implements OnInit,OnChanges {
           );
         } else {
           // statusid.value = prev_val;
-          for(let i of this.projectlist){
-            if(i.id==updateValue){
-              i.status=statusid.value;
-              i.remarks='';
-              projectdata={...i};
-              break;
-            }
-          }
+          // for(let i of this.projectlist){
+          //   if(i.id==updateValue){
+          //     i.status=statusid.value;
+          //     i.remarks='';
+          //     projectdata={...i};
+          //     break;
+          //   }
+          // }
 
           this.projectService.getProject().subscribe((data)=>{
             console.log(data);
