@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialog,MatDialogConfig } from '@angular/material/dialog';
+import { UpPopComponent } from '../up-pop/up-pop.component';
 import {MilestoneService} from '../services/milestone.service';
 @Component({
   selector: 'app-milestone',
@@ -7,7 +9,7 @@ import {MilestoneService} from '../services/milestone.service';
   styleUrls: ['./milestone.component.css']
 })
 export class MilestoneComponent implements OnInit {
-   constructor(private milestone:MilestoneService) { }
+   constructor(private milestone:MilestoneService,private dialog:MatDialog) { }
   milestoneArray:any=[]
   milestoneStatus:any=[]
   ngOnInit(): void {
@@ -25,15 +27,55 @@ getValue(milesId:any,statusId:any){
    return milesId==statusId
 }
 updateVal(updateValue:any,statusid:any){
-  
-  console.log(this.milestoneArray);
-  console.log(statusid.value+ "is status")
-  console.log(updateValue+ "is value");
   let milesdata:any;
+  
+  if(statusid.value==5 || statusid.value==4){
+    const dialogConfig =new MatDialogConfig();
+    dialogConfig.disableClose=true;
+    dialogConfig.autoFocus=true;
+    dialogConfig.width="20%";
+    dialogConfig.data = { updateValue: updateValue };
+    const dialogRef = this.dialog.open(UpPopComponent,dialogConfig);
+    dialogRef.afterClosed().subscribe(result => {
+      if (result && result.submit) {
+        console.log("submit is there")
+        for (let i of result.project_array) {
+          if (i.id == updateValue) {
+            console.log(i.id, "this is ID")
+            i.status = statusid.value;
+            milesdata = { ...i };
+            console.log(milesdata, "this is project data")
+            break;
+          }
+        }
+        // console.log(result.project_array[updateValue].remarks, " Rhythm")
+        // projectdata.remarks = result.project_array[updateValue].remarks;
+        this.milestone.updateStatus(updateValue, milesdata).subscribe(
+          (data) => {
+            this.milestone.getMilestone().subscribe((data: any) => {
+              this.milestoneArray = data;
+              console.log(this.milestoneArray, " On changes")
+            });
+          }
+        );
+      } else {
+        this.milestone.getMilestone().subscribe((data)=>{
+          console.log(data);
+          this.milestoneArray=data;
+        })
+        
+      }
+    });
+     
+    return;
+
+  }
+ 
   for(let i of this.milestoneArray){
     if(i.id==updateValue){
       console.log(i)
       i.status=statusid.value;
+      i.remarks=''  
       milesdata = {...i};
       console.log(milesdata)
       break;  

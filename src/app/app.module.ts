@@ -12,6 +12,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UpPopComponent } from './up-pop/up-pop.component';
+import { UpThePopComponent } from './up-the-pop/up-the-pop.component';
 
 const routes :Routes = [
   // {path: '', redirectTo: '/project', pathMatch: 'full'},
@@ -28,6 +30,8 @@ const routes :Routes = [
     MilestoneComponent,
     NavbarComponent,
     PopUpComponent,
+    UpPopComponent,
+    UpThePopComponent,
   ],
   imports: [
     BrowserModule,

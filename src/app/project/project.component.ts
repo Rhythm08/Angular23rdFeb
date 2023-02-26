@@ -9,7 +9,7 @@ import { PopUpComponent } from '../pop-up/pop-up.component';
   styleUrls: ['./project.component.css']
 })
 
-export class ProjectComponent implements OnInit,OnChanges {
+export class ProjectComponent implements OnInit {
   flag:number=0;
   prev_val:any;
   constructor(private projectService: ProjectService, private dialog:MatDialog) { }
@@ -27,13 +27,7 @@ export class ProjectComponent implements OnInit,OnChanges {
       this.projectlistStatus=data;
     })
   }
-  ngOnChanges(){   // To be Removed
-    this.projectlist.getProject().subscribe((data: any) => {
-                
-      this.projectlist=data;
-      console.log(this.projectlist," On changes")
-    });
-  }
+
   
   getValue(projectId:any,statusId:any){
       
@@ -41,7 +35,7 @@ export class ProjectComponent implements OnInit,OnChanges {
   }
 
   updateVal(updateValue:any,statusid:any){
-     let prev_val=statusid.value;
+    //  let prev_val=statusid.value;
 
     let projectdata:any;
 
@@ -75,22 +69,11 @@ export class ProjectComponent implements OnInit,OnChanges {
             }
           );
         } else {
-          // statusid.value = prev_val;
-          // for(let i of this.projectlist){
-          //   if(i.id==updateValue){
-          //     i.status=statusid.value;
-          //     i.remarks='';
-          //     projectdata={...i};
-          //     break;
-          //   }
-          // }
-
           this.projectService.getProject().subscribe((data)=>{
             console.log(data);
             this.projectlist=data;
           })
           
-          console.log(prev_val+ "current value")
           this.flag=1;
         }
       });

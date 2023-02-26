@@ -1,0 +1,16 @@
+<div class="pop-up">
+    <div class="pop-up-content">
+        <div class="pop-up-header">
+            <h5>Pop Up</h5>
+        </div>
+        <div class="pop-up-body">
+            <label>Enter Reason : </label>
+            <input type="text" class="form-control" [(ngModel)]="value" >
+        </div>
+        <div class="pop-up-footer">
+            <button class="btn btn-primary" (click)="OnSubmit()">Submit</button>
+            <span>&CircleTimes;</span>
+            <button class="btn btn-danger" (click)="OnCancel()">Cancel</button>
+        </div>
+    </div>
+</div>

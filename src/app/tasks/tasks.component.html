@@ -6,6 +6,8 @@
           <th>Name</th>
           <th>Description</th>
           <th>Status</th>
+        <th style="visibility: show;">Remarks</th>
+
       </tr>
   </thead>
   <tbody>
@@ -17,10 +19,12 @@
             <select (change)="updateVal(task.id,$event.target)">
               <option  *ngFor=" let status of taskStatusArray"
               [selected]="getValue(task.status,status.id)" [value]="status.id" [style.display]="checkDisable(task.status,status.id)?'none':'unset'"
-              >{{status.id+status.name}}</option>
+              >{{status.name}}</option>
               
             </select>
           </td>
+        <td  style="visibility: show;">{{task.remarks}}</td>
+
       </tr>
       
   </tbody>

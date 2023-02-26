@@ -1,18 +1,18 @@
 import { Component,OnInit,Inject,OnChanges, SimpleChanges } from '@angular/core';
 import { MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ProjectService } from '../services/project.service';
+import { MilestoneService } from '../services/milestone.service';
 @Component({
-  selector: 'app-pop-up',
-  templateUrl: './pop-up.component.html',
-  styleUrls: ['./pop-up.component.css']
+  selector: 'app-up-pop',
+  templateUrl: './up-pop.component.html',
+  styleUrls: ['./up-pop.component.css']
 })
-export class PopUpComponent implements OnInit {
+export class UpPopComponent {
   value:any;
   project_array:any=[];
-  constructor(private dialogRef: MatDialogRef<PopUpComponent>, private projectService: ProjectService,@Inject(MAT_DIALOG_DATA) 
+  constructor(private dialogRef: MatDialogRef<UpPopComponent>, private mileService: MilestoneService,@Inject(MAT_DIALOG_DATA) 
   public data:any){}
     ngOnInit(): void {
-      this.projectService.getProject().subscribe((data)=>{
+      this.mileService.getMilestone().subscribe((data)=>{
         console.log(data);
         this.project_array=data;
       })
@@ -38,5 +38,4 @@ export class PopUpComponent implements OnInit {
     }
     
       
-
 }
