@@ -1,6 +1,6 @@
-import { Component,OnChanges,OnInit} from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import { ProjectService } from '../services/project.service';
-import { MatDialog,MatDialogConfig } from '@angular/material/dialog';
+import { MatDialog,MatDialogConfig } from '@angular/material/dialog'; 
 import { PopUpComponent } from '../pop-up/pop-up.component';
 
 @Component({
@@ -10,7 +10,7 @@ import { PopUpComponent } from '../pop-up/pop-up.component';
 })
 
 export class ProjectComponent implements OnInit {
-  flag:number=0;
+  flag=0;
   prev_val:any;
   constructor(private projectService: ProjectService, private dialog:MatDialog) { }
   projectlist:any= []
@@ -49,7 +49,7 @@ export class ProjectComponent implements OnInit {
       dialogRef.afterClosed().subscribe(result => {
         if (result && result.submit) {
           console.log("submit is there")
-          for (let i of result.project_array) {
+          for (const i of result.project_array) {
             if (i.id == updateValue) {
               console.log(i.id, "this is ID")
               i.status = statusid.value;
@@ -83,7 +83,7 @@ export class ProjectComponent implements OnInit {
     }
 
     console.log("Breakdown")
-    for(let i of this.projectlist){
+    for(const i of this.projectlist){
       if(i.id==updateValue){
         i.status=statusid.value;
         i.remarks='';

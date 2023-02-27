@@ -1,4 +1,4 @@
-import { Component,OnInit,Inject,OnChanges, SimpleChanges } from '@angular/core';
+import { Component,OnInit,Inject } from '@angular/core';
 import { MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TaskService } from '../services/task.service';
 @Component({
@@ -6,7 +6,7 @@ import { TaskService } from '../services/task.service';
   templateUrl: './up-the-pop.component.html',
   styleUrls: ['./up-the-pop.component.css']
 })
-export class UpThePopComponent {
+export class UpThePopComponent implements OnInit {
   value:any;
   project_array:any=[];
   constructor(private dialogRef: MatDialogRef<UpThePopComponent>, private taskService: TaskService,@Inject(MAT_DIALOG_DATA) 
@@ -20,7 +20,7 @@ export class UpThePopComponent {
     
    OnSubmit(){
    console.log(this.data.updateValue, "the val");
-    for(let i of this.project_array){
+    for(const i of this.project_array){
       if(i.id==this.data.updateValue){
         i.remarks=this.value;
         console.log(i.remarks, " remarks");

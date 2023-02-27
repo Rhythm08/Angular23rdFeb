@@ -1,4 +1,4 @@
-import { Component,OnInit,Inject,OnChanges, SimpleChanges } from '@angular/core';
+import { Component,Inject, OnInit } from '@angular/core';
 import { MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MilestoneService } from '../services/milestone.service';
 @Component({
@@ -6,7 +6,7 @@ import { MilestoneService } from '../services/milestone.service';
   templateUrl: './up-pop.component.html',
   styleUrls: ['./up-pop.component.css']
 })
-export class UpPopComponent {
+export class UpPopComponent implements OnInit {
   value:any;
   project_array:any=[];
   constructor(private dialogRef: MatDialogRef<UpPopComponent>, private mileService: MilestoneService,@Inject(MAT_DIALOG_DATA) 
@@ -20,7 +20,7 @@ export class UpPopComponent {
     
    OnSubmit(){
    console.log(this.data.updateValue, "the val");
-    for(let i of this.project_array){
+    for(const i of this.project_array){
       if(i.id==this.data.updateValue){
         i.remarks=this.value;
         console.log(i.remarks, " remarks");

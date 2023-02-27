@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { MatDialog,MatDialogConfig } from '@angular/material/dialog';
 import { UpPopComponent } from '../up-pop/up-pop.component';
 import {MilestoneService} from '../services/milestone.service';
@@ -39,7 +38,7 @@ updateVal(updateValue:any,statusid:any){
     dialogRef.afterClosed().subscribe(result => {
       if (result && result.submit) {
         console.log("submit is there")
-        for (let i of result.project_array) {
+        for (const i of result.project_array) {
           if (i.id == updateValue) {
             console.log(i.id, "this is ID")
             i.status = statusid.value;
@@ -71,7 +70,7 @@ updateVal(updateValue:any,statusid:any){
 
   }
  
-  for(let i of this.milestoneArray){
+  for(const i of this.milestoneArray){
     if(i.id==updateValue){
       console.log(i)
       i.status=statusid.value;

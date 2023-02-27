@@ -40,7 +40,7 @@ export class TasksComponent implements OnInit {
       dialogRef.afterClosed().subscribe(result => {
         if (result && result.submit) {
           console.log("submit is there")
-          for (let i of result.project_array) {
+          for (const i of result.project_array) {
             if (i.id == updateValue) {
               console.log(i.id, "this is ID")
               i.status = statusid.value;
@@ -71,7 +71,7 @@ export class TasksComponent implements OnInit {
       return;
 
     }
-    for(let i of this.taskArray){
+    for(const i of this.taskArray){
       if(i.id==updateValue){
         i.status=statusid.value;
         i.remarks=''

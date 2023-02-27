@@ -1,4 +1,4 @@
-import { Component,OnInit,Inject,OnChanges, SimpleChanges } from '@angular/core';
+import { Component,OnInit,Inject} from '@angular/core';
 import { MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ProjectService } from '../services/project.service';
 @Component({
@@ -20,7 +20,7 @@ export class PopUpComponent implements OnInit {
     
    OnSubmit(){
    console.log(this.data.updateValue, "the val");
-    for(let i of this.project_array){
+    for(const i of this.project_array){
       if(i.id==this.data.updateValue){
         i.remarks=this.value;
         console.log(i.remarks, " remarks");
