@@ -39,8 +39,8 @@
       "id": 6,
       "name": "Project 6",
       "description": "Project 6 description",
-      "status": "4",
-      "remarks": "hold it for me plss"
+      "status": "2",
+      "remarks": ""
     }
   ],
   "Milestone": [
@@ -99,7 +99,7 @@
       "id": 3,
       "name": "Task 3",
       "description": "Task 3 description",
-      "status": "3",
+      "status": "2",
       "remarks": ""
     },
     {
